@@ -4,7 +4,7 @@ import "./App.css";
 import Input from "./components/Input";
 
 const props = [
-	{ default: "" },
+	{ default: true },
 	{ error: true },
 	{ disabled: true },
 	{ helperText: "Some interesting text" },
@@ -12,17 +12,19 @@ const props = [
 	{ startIcon: true },
 	{ endIcon: true },
 	{ fullWidth: true },
+	{ size: "small" },
+	{ size: "medium" },
 ];
 
 const pass = props.map((prop) => {
 	let keys = Object.keys(prop);
-	console.log(keys);
+	let vals = Object.values(prop);
 	return (
 		<Input
 			key={keys}
 			name={keys[0]}
-			value={keys[0] == "helperText" ? Object.values(prop)[0] : null}
-			type={Object.values(prop).length > 1 && "helperError"}
+			value={vals[0]}
+			type={vals.length > 1 && "helperError"}
 		/>
 	);
 });

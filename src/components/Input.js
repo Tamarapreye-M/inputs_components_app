@@ -4,15 +4,24 @@ import PropTypes from "prop-types";
 const Input = (props) => {
 	console.log(props);
 	let { name, type, value } = props;
+	let formClass = `form ${(name === "error" || type) && "errorText"}`;
 	return (
 		<div className="wrapper">
 			<h2>
-				{name} {type && "with an error"}
+				{name === "size" && value} {name} {type && "with an error"}
 			</h2>
-			<input type="text" placeholder="placeholder" className={type || name} />
-			{name === "helperText" && (
-				<p className={type === "helperError" && "errorText"}>{value}</p>
-			)}
+
+			<div className={formClass}>
+				<label htmlFor="">Label</label>
+				<br />
+				<input
+					type="text"
+					placeholder="Placeholder"
+					className={type || name}
+					disabled={name == "disabled" && value}
+				/>
+				{name === "helperText" && <p>{value}</p>}
+			</div>
 		</div>
 	);
 };

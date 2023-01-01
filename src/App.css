@@ -13,7 +13,7 @@ input {
 	width: 200px;
 	border: 1px solid #828282;
 	border-radius: 8px;
-	margin-bottom: 5px;
+	margin-block: 5px;
 }
 
 .container {
@@ -25,15 +25,28 @@ input {
 }
 h2 {
 	text-transform: capitalize;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #828282;
+	display: inline-block;
+}
+.form {
+	color: #333333;
+}
+.disabled {
+	/* Gray 6 */
+
+	background: #f2f2f2;
+	/* Gray 5 */
+
+	border: 1px solid #e0e0e0;
 }
 .error,
 .helperError {
-	border-color: red;
+	border-color: #d32f2f;
 }
 
 .errorText {
-	color: red;
+	color: #d32f2f;
 }
 .fullWidth {
 	width: 100%;
