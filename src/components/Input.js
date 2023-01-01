@@ -10,8 +10,8 @@ const Input = (props) => {
 				{name} {type && "with an error"}
 			</h2>
 			<input type="text" placeholder="placeholder" className={type || name} />
-			{name == "helperText" && (
-				<p className={type == "helperError" && "errorText"}>{value}</p>
+			{name === "helperText" && (
+				<p className={type === "helperError" && "errorText"}>{value}</p>
 			)}
 		</div>
 	);
