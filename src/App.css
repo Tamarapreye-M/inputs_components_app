@@ -51,3 +51,19 @@ h2 {
 .fullWidth {
 	width: 100%;
 }
+/* for the form */
+
+#password-input {
+	position: relative;
+	max-width: 300px;
+}
+.password-icons {
+	position: absolute;
+	top: 20%;
+	right: 15%;
+	cursor: pointer;
+}
+h3 {
+	word-wrap: break-word;
+	max-width: 300px;
+}

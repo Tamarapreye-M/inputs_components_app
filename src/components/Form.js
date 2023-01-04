@@ -21,6 +21,12 @@ const Form = () => {
 		return setFormValues((prev) => ({ ...prev, [name]: value }));
 	};
 
+	const [showPassword, setShowPassword] = useState(false);
+
+	const handlePassword = () => {
+		setShowPassword((prev) => !prev);
+	};
+
 	// const showFullName = (ev) => {
 	// 	const { value } = ev.target;
 	// 	setFullName(value);
@@ -46,17 +52,32 @@ const Form = () => {
 					/>
 					<h3>Your email is {email}</h3>
 				</div>
-				<div className="form-control">
+				<div className="form-control" id="password-input">
 					<input
-						type="password"
+						type={showPassword ? "text" : "password"}
 						placeholder="password"
 						name={"password"}
 						onChange={showValues}
 					/>
-					<div className="password-icons">
-						<span class="material-symbols-outlined">visibility</span>
-						<span class="material-symbols-outlined">visibility_off</span>
-					</div>
+
+					{!showPassword && (
+						<span
+							onClick={handlePassword}
+							class="material-symbols-outlined password-icons"
+						>
+							visibility
+						</span>
+					)}
+					{showPassword && (
+						<span
+							span
+							onClick={handlePassword}
+							class="material-symbols-outlined password-icons"
+						>
+							visibility_off
+						</span>
+					)}
+
 					<h3>Your password is {password}</h3>
 				</div>
 				<div className="form-control">
