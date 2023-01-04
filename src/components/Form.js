@@ -14,7 +14,8 @@ const Form = () => {
 	};
 
 	const [form, setFormValues] = useState(initialFormValues);
-	const { fullName, email, password, confirmPassword, gender } = form;
+	const { fullName, email, password, confirmPassword, gender, languages } =
+		form;
 	const showValues = (ev) => {
 		const { name, value } = ev.target;
 		return setFormValues((prev) => ({ ...prev, [name]: value }));
@@ -52,6 +53,10 @@ const Form = () => {
 						name={"password"}
 						onChange={showValues}
 					/>
+					<div className="password-icons">
+						<span class="material-symbols-outlined">visibility</span>
+						<span class="material-symbols-outlined">visibility_off</span>
+					</div>
 					<h3>Your password is {password}</h3>
 				</div>
 				<div className="form-control">
