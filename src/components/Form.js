@@ -41,6 +41,8 @@ const Form = () => {
 		<div>
 			<form>
 				<div className="form-control">
+					<label htmlFor="fullname">Enter your full name</label>
+
 					<input
 						type="text"
 						placeholder="full name"
