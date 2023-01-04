@@ -63,6 +63,8 @@ const Form = () => {
 					<h3>Your email is {email}</h3>
 				</div>
 				<div className="form-control" id="password-input">
+					<label htmlFor="password">Enter your password</label>
+					<br />
 					<input
 						type={showPassword ? "text" : "password"}
 						placeholder="password"
