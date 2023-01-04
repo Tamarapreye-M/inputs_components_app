@@ -17,8 +17,18 @@ const Form = () => {
 	const { fullName, email, password, confirmPassword, gender, languages } =
 		form;
 	const showValues = (ev) => {
-		const { name, value } = ev.target;
-		return setFormValues((prev) => ({ ...prev, [name]: value }));
+		const { name, value, checked } = ev.target;
+		if (Array.isArray(form[name])) {
+			let arr = [...form[name]];
+			if (checked) {
+				arr.push(value);
+			} else {
+				arr = arr.filter((each) => each !== value);
+			}
+			setFormValues((prev) => ({ ...prev, [name]: arr }));
+		} else {
+			return setFormValues((prev) => ({ ...prev, [name]: value }));
+		}
 	};
 
 	const [showPassword, setShowPassword] = useState(false);
@@ -27,10 +37,6 @@ const Form = () => {
 		setShowPassword((prev) => !prev);
 	};
 
-	// const showFullName = (ev) => {
-	// 	const { value } = ev.target;
-	// 	setFullName(value);
-	// };
 	return (
 		<div>
 			<form>
@@ -63,7 +69,7 @@ const Form = () => {
 					{!showPassword && (
 						<span
 							onClick={handlePassword}
-							class="material-symbols-outlined password-icons"
+							className="material-symbols-outlined password-icons"
 						>
 							visibility
 						</span>
@@ -72,7 +78,7 @@ const Form = () => {
 						<span
 							span
 							onClick={handlePassword}
-							class="material-symbols-outlined password-icons"
+							className="material-symbols-outlined password-icons"
 						>
 							visibility_off
 						</span>
@@ -108,6 +114,7 @@ const Form = () => {
 					<label htmlFor="female">Female</label>
 					<h3>Your gender is {gender}</h3>
 				</div>
+				{/* checkboxes */}
 				<div className="form-control">
 					<input
 						type="checkbox"
@@ -115,6 +122,7 @@ const Form = () => {
 						name="languages"
 						value={"javascript"}
 						onChange={showValues}
+						checked={form.languages.indexOf("javascript") !== -1}
 					/>
 					<label htmlFor="language">Javascript</label>
 				</div>
@@ -125,6 +133,7 @@ const Form = () => {
 						name="languages"
 						value={"php"}
 						onChange={showValues}
+						checked={form.languages.indexOf("php") !== -1}
 					/>
 					<label htmlFor="language">php</label>
 				</div>
@@ -135,6 +144,7 @@ const Form = () => {
 						name="languages"
 						value={"python"}
 						onChange={showValues}
+						checked={form.languages.indexOf("python") !== -1}
 					/>
 					<label htmlFor="language">python</label>
 				</div>
@@ -145,9 +155,24 @@ const Form = () => {
 						name="languages"
 						value={"c+"}
 						onChange={showValues}
+						checked={form.languages.indexOf("c+") !== -1}
 						// onSelect={showValues}
 					/>
 					<label htmlFor="language">c+</label>
+					<h3>
+						{languages.length > 1
+							? // `Your languages are ${languages.reduce((acc, curr, i, ar) =>
+							  // 		i !== ar.length - 1
+							  // 			? `${acc}${ar.length > 2 && ","} ${curr}`
+							  // 			: `${acc} and ${curr}`
+							  //   )}`
+							  `
+							  Your languages are 
+							  ${languages.slice(0, -1).join(", ")} 
+							  and ${languages.slice(-1).join("")}
+							  `
+							: `Your language is ${languages.join("")}`}
+					</h3>
 				</div>
 			</form>
 		</div>
