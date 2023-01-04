@@ -101,12 +101,13 @@ const Form = () => {
 						name="confirmPassword"
 					/>
 				</div>
+				<p>What is your gender?</p>
 				<div className="form-control">
 					<input
 						type="radio"
 						id="male"
 						name="gender"
-						value={"male"}
+						value={"Male"}
 						onChange={showValues}
 					/>
 					<label htmlFor="male">Male</label>
@@ -116,13 +117,24 @@ const Form = () => {
 						type="radio"
 						id="female"
 						name="gender"
-						value={"female"}
+						value={"Female"}
 						onChange={showValues}
 					/>
 					<label htmlFor="female">Female</label>
-					<h3>Your gender is {gender}</h3>
 				</div>
+				<div className="form-control">
+					<input
+						type="radio"
+						id="non-binary"
+						name="gender"
+						value={"Non-binary"}
+						onChange={showValues}
+					/>
+					<label htmlFor="non-binary">Non-binary</label>
+				</div>
+				<h3>Your gender is {gender}</h3>
 				{/* checkboxes */}
+				<p>What languages do you use?</p>
 				<div className="form-control">
 					<input
 						type="checkbox"
