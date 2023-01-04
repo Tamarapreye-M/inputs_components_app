@@ -56,14 +56,19 @@ h2 {
 #password-input {
 	position: relative;
 	max-width: 300px;
+	/* transition: all 3s ease-in-out; */
 }
 .password-icons {
 	position: absolute;
-	top: 20%;
+	top: 32%;
 	right: 15%;
 	cursor: pointer;
 }
 h3 {
 	word-wrap: break-word;
 	max-width: 300px;
+	margin-block: 1rem;
+}
+.form-control {
+	margin-block: 2rem;
 }

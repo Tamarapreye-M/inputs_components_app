@@ -72,17 +72,15 @@ const Form = () => {
 						onChange={showValues}
 					/>
 
-					{!showPassword && (
+					{!showPassword ? (
 						<span
 							onClick={handlePassword}
 							className="material-symbols-outlined password-icons"
 						>
 							visibility
 						</span>
-					)}
-					{showPassword && (
+					) : (
 						<span
-							span
 							onClick={handlePassword}
 							className="material-symbols-outlined password-icons"
 						>
