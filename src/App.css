@@ -10,10 +10,10 @@ input {
 	font: inherit;
 	padding: 10px;
 	padding-left: 15px;
-	width: 200px;
+	/* width: 200px; */
 	border: 1px solid #828282;
 	border-radius: 8px;
-	margin-block: 5px;
+	margin: 5px;
 }
 
 .container {

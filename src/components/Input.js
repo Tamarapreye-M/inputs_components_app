@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const Input = (props) => {
-	console.log(props);
+	// console.log(props);
 	let { name, type, value } = props;
 	let formClass = `form ${(name === "error" || type) && "errorText"}`;
 	return (
