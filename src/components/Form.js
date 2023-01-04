@@ -42,7 +42,7 @@ const Form = () => {
 			<form>
 				<div className="form-control">
 					<label htmlFor="fullname">Enter your full name</label>
-
+					<br />
 					<input
 						type="text"
 						placeholder="full name"
@@ -52,6 +52,8 @@ const Form = () => {
 					<h3>Your full name is {fullName}</h3>
 				</div>
 				<div className="form-control">
+					<label htmlFor="email">Enter your email</label>
+					<br />
 					<input
 						type="email"
 						placeholder="email"
