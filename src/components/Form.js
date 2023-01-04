@@ -93,6 +93,8 @@ const Form = () => {
 					<h3>Your password is {password}</h3>
 				</div>
 				<div className="form-control">
+					<label htmlFor="confirmPassword">Confirm your Password</label>
+					<br />
 					<input
 						type="password"
 						placeholder="confirm password"
