@@ -16,6 +16,19 @@ input {
 	margin: 5px;
 }
 
+.default:hover {
+	border-color: #333333;
+}
+.default:hover form {
+	color: #333333;
+}
+.default:focus {
+	border-color: #2962ff;
+}
+.default:focus form {
+	color: #2962ff;
+}
+
 .container {
 	padding: 2rem;
 }
