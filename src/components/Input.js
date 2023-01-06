@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const Input = (props) => {
-	// console.log(props);
-	let { name, type, value } = props;
-	let formClass = `form ${(name === "error" || type) && "errorText"}`;
+	console.log(props);
+	const { name, type, value } = props;
+	const formClass = `form ${(name === "error" || type) && "errorText"}`;
 	return (
 		<div className="wrapper">
 			<h2>

@@ -48,8 +48,11 @@ const Form = () => {
 						placeholder="full name"
 						name={"fullName"}
 						onChange={showValues}
+						rows="4"
 					/>
+
 					<h3>Your full name is {fullName}</h3>
+					<textarea name="message" id="" cols="30" rows="4"></textarea>
 				</div>
 				<div className="form-control">
 					<label htmlFor="email">Enter your email</label>

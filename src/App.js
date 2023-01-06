@@ -5,31 +5,27 @@ import Input from "./components/Input";
 import Form from "./components/Form";
 
 const props = [
-	{ default: true },
-	{ error: true },
-	{ disabled: true },
-	{ helperText: "Some interesting text" },
-	{ helperText: "Some interesting text", error: true },
-	{ startIcon: true },
-	{ endIcon: true },
-	{ fullWidth: true },
-	{ size: "small" },
-	{ size: "medium" },
+	{ name: "default", key: "a" },
+	{ name: "error", key: "b" },
+	{ name: "disabled", key: "c" },
+	{ name: "helperText", value: "Some interesting text", key: "d" },
+	{
+		name: "helperText",
+		value: "Some interesting text",
+		type: "helperError",
+		key: "e",
+	},
+	{ name: "startIcon", key: "f" },
+	{ name: "endIcon", key: "g" },
+	{ name: "fullWidth", key: "h" },
+	{ name: "size", value: "small", key: "i" },
+	{ name: "size", value: "medium", key: "j" },
 ];
 
 const pass = props.map((prop) => {
-	let keys = Object.keys(prop);
-	let vals = Object.values(prop);
-	return (
-		<>
-			<Input
-				key={keys}
-				name={keys[0]}
-				value={vals[0]}
-				type={vals.length > 1 && "helperError"}
-			/>
-		</>
-	);
+	// console.log(prop.name);
+	let result = <Input key={prop.key} {...prop} />;
+	return result;
 });
 
 const App = () => {
