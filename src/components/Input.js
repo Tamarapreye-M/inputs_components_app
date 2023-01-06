@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 
 const Input = (props) => {
 	console.log(props);
@@ -25,7 +24,5 @@ const Input = (props) => {
 		</div>
 	);
 };
-
-Input.propTypes = {};
 
 export default Input;
