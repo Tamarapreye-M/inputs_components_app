@@ -20,6 +20,7 @@ const props = [
 	{ name: "fullWidth", key: "h" },
 	{ name: "size", value: "small", key: "i" },
 	{ name: "size", value: "medium", key: "j" },
+	{ name: "size", value: "large", key: "k" },
 ];
 
 const pass = props.map((prop) => {
