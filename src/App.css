@@ -16,18 +16,18 @@ input {
 	margin: 5px;
 }
 
-.default:hover,
+input:hover,
 .error:hover {
 	border-color: #333333;
 }
-.default:hover form,
+input:hover form,
 .error:hover form {
 	color: #333333;
 }
-.default:focus {
+input:focus {
 	border-color: #2962ff;
 }
-.default:focus form {
+input:focus form {
 	color: #2962ff;
 }
 

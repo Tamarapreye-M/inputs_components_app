@@ -21,6 +21,8 @@ const props = [
 	{ name: "size", value: "small", key: "i" },
 	{ name: "size", value: "medium", key: "j" },
 	{ name: "size", value: "large", key: "k" },
+	{ name: "value", value: "text", key: "l" },
+	{ name: "rows", value: "4", type: "multiline", key: "m" },
 ];
 
 const pass = props.map((prop) => {
