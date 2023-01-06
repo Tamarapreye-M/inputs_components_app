@@ -26,6 +26,7 @@ input:hover form,
 }
 input:focus {
 	border-color: #2962ff;
+	border-radius: 8px;
 }
 input:focus form {
 	color: #2962ff;
