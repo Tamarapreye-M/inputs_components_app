@@ -1,7 +1,6 @@
 import React from "react";
 
 const Input = (props) => {
-	console.log(props);
 	const { name, type, value } = props;
 	const formClass = `form ${(name === "error" || type) && "errorText"}`;
 	return (
